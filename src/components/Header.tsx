@@ -1,17 +1,13 @@
+import { SkipBack } from 'phosphor-react'
 
-function Header({title, goBack}: { title: string, goBack?: any }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function Header({ title, goBack }: { title: string; goBack?: any }) {
   return (
-    <header
-      className="w-full bg-red-300 flex items-center gap-6 p-5"
-    >
-      <button
-        className="font-bold text-2xl"
-        type="button"
-        onClick={goBack}
-      >Voltar</button>
-      <h1
-        className="font-bold text-2xl"
-      >{title}</h1>
+    <header className="flex w-full items-center gap-6 bg-red-300 p-5">
+      <button className="text-2xl font-bold" type="button" onClick={goBack}>
+        <SkipBack size={30} />
+      </button>
+      <h1 className="text-xl font-bold ">{title}</h1>
     </header>
   )
 }
