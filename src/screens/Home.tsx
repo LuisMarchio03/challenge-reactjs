@@ -44,7 +44,7 @@ function Home() {
 
   useMemo(async () => {
     const token = localStorage.getItem('token');
-    if (token !== null || token !== undefined) {
+    if (token !== null || token !== undefined || token == "") {
       handleGetAllClients()
     } else {
       await handleGenerateToken()
