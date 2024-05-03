@@ -34,7 +34,6 @@ function Home() {
       const response = await api.get('/teste/clientes');
       const { data } = response.data;
 
-      console.log(data)
       setData(data)
 
     }  catch (error) {
@@ -45,7 +44,7 @@ function Home() {
 
   useMemo(async () => {
     const token = localStorage.getItem('token');
-    if (token) {
+    if (token !== null || token !== undefined || token == "") {
       handleGetAllClients()
     } else {
       await handleGenerateToken()
