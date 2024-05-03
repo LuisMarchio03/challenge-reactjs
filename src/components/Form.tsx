@@ -34,6 +34,7 @@ const Form: React.FC<FormProps> = ({ type, data, setData, onSubmit, onCancel }) 
   return (
     <form className="w-full mx-auto mt-10" onSubmit={handleSubmit}>
       <div className="flex items-center gap-5 mb-5">
+
         <div>
           <label htmlFor="tecl_nome" className="block mb-2 text-sm font-medium text-gray-900">
             Nome
