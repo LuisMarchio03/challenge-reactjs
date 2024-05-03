@@ -57,6 +57,7 @@ function Update() {
         tecl_id: parseInt(id)
       })
 
+      history.push('/')
       return true
     } catch (error) {
       console.error('Erro ao criar cliente:', error)

@@ -58,32 +58,33 @@ function Table({
           </tr>
         </thead>
         <tbody>
-          {data.map((client) => (
-            <tr key={client.TECL_ID} className="border-b bg-white">
-              <td className="whitespace-nowrap px-6 py-4 font-medium text-gray-900">
-                <button
-                  className="mr-8"
-                  type="button"
-                  onClick={async () => {
-                    await handleDelete(client.TECL_ID)
-                    await handleGetAllClients()
-                  }}
-                >
-                  <Trash size={28} />
-                </button>
-                <button
-                  onClick={() => history.push(`/update/${client.TECL_ID}`)}
-                >
-                  <Pencil size={28} />
-                </button>
-              </td>
-              <td className="px-6 py-4">{client.TECL_NOME}</td>
-              <td className="px-6 py-4">{client.TECL_ENDERECO}</td>
-              <td className="px-6 py-4">{client.TECL_CIDADE}</td>
-              <td className="px-6 py-4">{client.TECL_UF}</td>
-              <td className="px-6 py-4">{client.TECL_TELEFONE}</td>
-            </tr>
-          ))}
+          {data[0] != null &&
+            data?.map((client) => (
+              <tr key={client?.TECL_ID} className="border-b bg-white">
+                <td className="whitespace-nowrap px-6 py-4 font-medium text-gray-900">
+                  <button
+                    className="mr-8"
+                    type="button"
+                    onClick={async () => {
+                      await handleDelete(client?.TECL_ID)
+                      await handleGetAllClients()
+                    }}
+                  >
+                    <Trash size={28} />
+                  </button>
+                  <button
+                    onClick={() => history.push(`/update/${client?.TECL_ID}`)}
+                  >
+                    <Pencil size={28} />
+                  </button>
+                </td>
+                <td className="px-6 py-4">{client?.TECL_NOME}</td>
+                <td className="px-6 py-4">{client?.TECL_ENDERECO}</td>
+                <td className="px-6 py-4">{client?.TECL_CIDADE}</td>
+                <td className="px-6 py-4">{client?.TECL_UF}</td>
+                <td className="px-6 py-4">{client?.TECL_TELEFONE}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

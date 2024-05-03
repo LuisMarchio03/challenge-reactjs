@@ -54,7 +54,6 @@ const Form: React.FC<FormProps> = ({
             placeholder="Digite o nome"
             value={data.tecl_nome}
             onChange={handleChange}
-            readOnly={type === 2}
             required
           />
         </div>
@@ -72,7 +71,6 @@ const Form: React.FC<FormProps> = ({
             placeholder="Digite o endereço"
             value={data.tecl_endereco}
             onChange={handleChange}
-            readOnly={type === 2}
             required
           />
         </div>
@@ -93,7 +91,6 @@ const Form: React.FC<FormProps> = ({
             placeholder="Digite a cidade"
             value={data.tecl_cidade}
             onChange={handleChange}
-            readOnly={type === 2}
             required
           />
         </div>
@@ -111,7 +108,6 @@ const Form: React.FC<FormProps> = ({
             placeholder="Digite a UF"
             value={data.tecl_uf}
             onChange={handleChange}
-            readOnly={type === 2}
             required
           />
         </div>
@@ -129,7 +125,6 @@ const Form: React.FC<FormProps> = ({
             placeholder="Digite o telefone"
             value={data.tecl_telefone}
             onChange={handleChange}
-            readOnly={type === 2}
             required
           />
         </div>
